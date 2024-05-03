@@ -17,6 +17,7 @@ void	handle_bonus(int sig, siginfo_t *info, void *content)
 	static unsigned char	c;
 	static int				size;
 
+	(void)content;
 	if (sig == SIGUSR2)
 		c |= (1 << (7 - size));
 	size++;

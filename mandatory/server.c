@@ -24,7 +24,7 @@ void	handle(int sig)
 	if (size == 8)
 	{
 		if (c == '\0')
-			ft_printf("\n\033[1;81m [NEW MESSAGE] : ");
+			ft_printf("\n\033[1;93m [NEW MESSAGE] : ");
 		write(1, &c, 1);
 		c = 0;
 		size = 0;
@@ -34,7 +34,7 @@ void	handle(int sig)
 int	main(void)
 {
 	ft_printf("\033[1;91m [PID] :  \033[0m%d\n", getpid());
-	ft_printf("\n\033[1;81m [NEW MESSAGE] : ");
+	ft_printf("\n\033[1;93m [NEW MESSAGE] : ");
 	while (1)
 	{
 		signal(SIGUSR1, handle);

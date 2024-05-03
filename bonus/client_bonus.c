@@ -48,6 +48,7 @@ void	get_char(char *str, int pid)
 
 void	handle_client(int sig)
 {
+	(void)sig;
 	ft_printf("received🫡\n");
 }
 
