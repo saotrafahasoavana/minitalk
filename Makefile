@@ -18,7 +18,11 @@ fclean:	clean
 
 re:	fclean all
 
-bonus:	fclean
+clean_bonus:
+		@rm -f server
+		@rm -f client
+
+bonus:	clean_bonus
 		@cd libft && make
 		@cd printf && make
 		@cc $(FLAGS) bonus/server_bonus.c libft/libft.a printf/libftprintf.a -o server
